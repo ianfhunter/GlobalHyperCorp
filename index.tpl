@@ -13,12 +13,29 @@
         
         gtc = document.getElementsByClassName("global-tab-container")[0];
         gtc.innerHTML = GeographicOrderedHTML(objects);
+        
+        applyToggle();
     }
+    
+    
+    function switchOrdering(){
+        var data = {{!data}};
+        objects = objectify(data);  
+        
+        gtc = document.getElementsByClassName("global-tab-container")[0];
+        gtc.innerHTML = ProductOrderedHTML(objects);
+        
+        applyToggle();
+    }
+    
     window.onload = populate;
 </script>
 
 </head>
 <body>
+    <button type="button" onclick="toggleNegativeYOY()">Show only Negative YearOnYear changes</button>
+    <button type="button" onclick="switchOrdering()">Switch Ordering</button>
+
     <div class="global-tab-container"></div>
 </body>
 </html
