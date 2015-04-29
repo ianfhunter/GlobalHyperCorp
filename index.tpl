@@ -9,27 +9,16 @@
 <script>
     function populate(){
         var data = {{!data}};
-        console.log(data);
         objects = objectify(data);
-        console.log("complete");
         
-        gtc = document.getElementsByClassName("tab-container")[0];
+        gtc = document.getElementsByClassName("global-tab-container")[0];
         gtc.innerHTML = GeographicOrderedHTML(objects);
-        //hack below
-        reapplyCSS();
     }
     window.onload = populate;
 </script>
 
 </head>
 <body>
-    <div class="global-tab-container">
-        <div class="global tab-inner" >+ Global</div>
-        <div class="tab-inner tab-balance">&#8369; 132131.12B</div>
-        <div class="tab-inner tab-yearonyear">5.9%</div> 
-        <div class="tab-container">
-
-        </div>	
-    </div>
+    <div class="global-tab-container"></div>
 </body>
 </html

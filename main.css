@@ -6,8 +6,3 @@
 	margin-right: 30px;
 }
 
-/* Indent all child .tab-containers */
-.tab-container:not(:first-child)	{		
-	color:red;
-	margin-left: 30px;
-}
