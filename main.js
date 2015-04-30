@@ -37,7 +37,7 @@ function getHTMl(data,chain,title){
                  indicatorClass = "neutralYOY"
             }
             returnHTML += 
-                   "<div class=\"tab-container " + indicatorClass + " list-group-item list-group-item-warning\">" + 
+                   "<div class=\"tab-container leaf " + indicatorClass + " list-group-item list-group-item-warning\">" + 
                         "<div class=\"tab-inner\" > "+store.continent +"</div>"+
                         "<div class=\"tab-inner\" > "+store.country +"</div>"+
                         "<div class=\"tab-inner\" > "+store.brand +"</div>"+
@@ -110,7 +110,7 @@ function getHTMl(data,chain,title){
          indicatorClass = "neutralYOY"
     }
     
-    return "<div class=\"tab-container " + indicatorClass + " list-group-item\">"+
+    return "<div class=\"tab-container node " + indicatorClass + " list-group-item\">"+
             "<div class=\"tab-inner\" >+ "+title+"</div>"+
             "<div class=\"tab-inner tab-balance\">&#8369; "+revenue2022.toFixed(2)+"B</div>"+
             "<div class=\"tab-inner tab-yearonyear\">"+diff.toFixed(2)+"%"+indicator+"</div> "+
@@ -187,27 +187,30 @@ function ProductOrderedHTML(data){
 }
 function toggleNegativeYOY(){
     var divs = document.getElementsByClassName('positiveYOY');
+
     for(var i = 0; i != divs.length; ++i)
     {
-        if (divs[i].style.display !== 'none') {
+        console.log(divs[i].style)
+        if (divs[i].style.display != 'none') {
             divs[i].style.display = 'none';
         }
         else {
-            divs[i].style.display = 'block';
+            divs[i].style.display = 'inline-block';
         }
     }
 }
 
 function applyToggle(){
-    var elems = document.getElementsByClassName('tab-container');
+    var elems = document.getElementsByClassName('node');
 
     for(var i = 0; i != elems.length; ++i)
     {
         elems[i].onclick=function(){
             console.log("HI");
             babies = this.children;
+            console.log(babies)
         
-            for(var i = 0; i < babies.length; i++) {   
+            for(var i = 3; i < babies.length; i++) {   
                 if(babies[i].style.display != 'none') {
                     babies[i].style.display = 'none';   
                 }else{

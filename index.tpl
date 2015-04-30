@@ -33,6 +33,9 @@
 
 </head>
 <body>
+    <div>
+        <img src="http://i.gyazo.com/cf6e393d5c8d507a67c21e22f4943425.png" />
+    </div>
     <button type="button" onclick="toggleNegativeYOY()">Show only Negative YearOnYear changes</button>
     <button type="button" onclick="switchOrdering()">Switch Ordering</button>
 
