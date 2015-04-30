@@ -37,7 +37,8 @@
         <img src="http://i.gyazo.com/cf6e393d5c8d507a67c21e22f4943425.png" />
     </div>
     <button type="button" onclick="toggleNegativeYOY()">Show only Negative YearOnYear changes</button>
-    <button type="button" onclick="switchOrdering()">Switch Ordering</button>
+    <button type="button" onclick="switchOrdering()">Order By Product</button>
+    <button type="button" onclick="populate()">Order By Region</button>
 
     <div class="global-tab-container"></div>
 </body>
