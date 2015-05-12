@@ -1,5 +1,7 @@
 # GlobalHyperCorp
 
+An example website to give a large franchise's an overview of its stores.
+
 Requirements:
 * Python 2.7
 * http://bottlepy.org/docs/dev/index.html
